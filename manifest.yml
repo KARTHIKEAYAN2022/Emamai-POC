@@ -1,0 +1,12 @@
+applications:
+  - name: emamipoc
+    memory: 512M
+    instances: 1
+    timeout: 180
+    services:
+      - hana
+      - xsuaa
+    buildpacks:
+      - python_buildpack
+    command: >
+      uvicorn api:app 
