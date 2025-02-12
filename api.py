@@ -15,7 +15,7 @@ data = load_data()
 @app.get("/doubtful_debts")
 async def doubtful_debts():
     return {"@odata.context": "https://emamai-poc.onrender.com/$metadata#doubtful_debts",
-        "value":data}
+        "value": data}
 
 @app.get("/doubtful_debts/$metadata")
 async def get_metadata():
